@@ -49,7 +49,7 @@ class AccountCashUpdate(models.Model):
                     AND move_line.ref LIKE '{}%'
                     AND move_line.name LIKE '{}'
                     AND inv.it_type_document = '{}'
-            ))
+            )
         """
         for update in self:
             sql12 = sql12_template.format(update.account12_id.id,
