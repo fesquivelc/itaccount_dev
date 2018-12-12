@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_sale_update_tree" model="ir.ui.view">
+            <field name="name">account.sale.update.tree</field>
+            <field name="model">account.sale.update.it</field>
+            <field name="arch" type="xml">
+                <tree string="Actualización de cuentas para caja" editable="top">
+                    <field name="catalog01_id"/>
+                    <field name="serial_number"/>
+                    <field name="state"/>
+                    <field name="journal_id" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="account12_id" domain="[('code','=like','12%')]" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_account_sale_update" model="ir.actions.act_window">
+            <field name="name">Actualizar cuentas para ventas</field>
+            <field name="res_model">account.sale.update.it</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account_sale_update_tree" />
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Configuración para actualizar cuentas para ventas
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

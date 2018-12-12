@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <menuitem name="Actualización cuenta"
+                  id="account_update_configuration_menu"
+                  parent="account.menu_finance_configuration"
+                  sequence="22"/>
+        <menuitem name="Actualización de ventas"
+                  id="account_update_sale_menu"
+                  parent="account_update_configuration_menu"
+                  sequence="10"
+                  action="action_account_sale_update"/>
+        <menuitem name="Actualización de caja"
+                  id="account_update_cash_menu"
+                  parent="account_update_configuration_menu"
+                  sequence="20"
+                  action="action_account_cash_update"/>
+    </data>
+</odoo>
