@@ -11,7 +11,7 @@ class AccountSaleUpdate(models.Model):
     account12_id = fields.Many2one('account.account', u'Cuenta 12')
 
     @api.multi
-    def do_update(self):
+    def do_update(self, journal_id):
         sql12_template = """
                 UPDATE account_move_line 
                 SET account_id='{}' WHERE id IN 
@@ -33,7 +33,7 @@ class AccountSaleUpdate(models.Model):
                 """
         for update in self:
             sql12 = sql12_template.format(update.account12_id.id,
-                                          update.journal_id.id,
+                                          journal_id,
                                           update.date_start,
                                           update.date_end,
                                           update.serial_number,

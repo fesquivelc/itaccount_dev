@@ -8,7 +8,7 @@ class AccountUpdate(models.AbstractModel):
     catalog01_id = fields.Many2one('einvoice.catalog.01', u'Documento', required=True)
     serial_number = fields.Char(u'Serie', size=4, required=True)
     state = fields.Char(u'Estado', size=1, required=True)
-    journal_id = fields.Many2one('account.journal', u'Libro', required=True)
+    # journal_id = fields.Many2one('account.journal', u'Libro', required=True)
     date_start = fields.Date(u'Fecha de inicio', required=True)
     date_end = fields.Date(u'Fecha de fin', required=True)
 
