@@ -18,7 +18,6 @@ class AccountSaleUpdate(models.Model):
                 (
                     SELECT move_line.id 
                     FROM account_move_line move_line
-                        INNER JOIN account_invoice inv ON move_line.invoice_id = inv.id
                         LEFT JOIN account_move move ON move.id=move_line.move_id
                         LEFT JOIN account_account account ON account.id=move_line.account_id
                     WHERE 
@@ -26,9 +25,9 @@ class AccountSaleUpdate(models.Model):
                         AND  
                         LEFT(account.code,2)='12'                     
                         AND move.fecha_contable BETWEEN '{}' AND '{}'
-                        AND move_line.ref LIKE '{}%'
+                        AND move_line.nro_comprobante LIKE '{}%'
                         AND move_line.name LIKE '{}'
-                        AND inv.it_type_document = '{}'
+                        AND move_line.type_document_it = '{}'
                 )
                 """
         for update in self:
