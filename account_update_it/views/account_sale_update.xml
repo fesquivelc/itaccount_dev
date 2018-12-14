@@ -9,7 +9,6 @@
                     <field name="catalog01_id"/>
                     <field name="serial_number"/>
                     <field name="state"/>
-                    <field name="journal_id" />
                     <field name="date_start" />
                     <field name="date_end" />
                     <field name="account12_id" domain="[('code','=like','12%')]" />

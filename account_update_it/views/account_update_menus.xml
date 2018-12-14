@@ -9,10 +9,10 @@
                   parent="account_update_configuration_menu"
                   sequence="10"
                   action="action_account_sale_update"/>
-        <menuitem name="Actualización de caja"
+        <!--<menuitem name="Actualización de caja"
                   id="account_update_cash_menu"
                   parent="account_update_configuration_menu"
                   sequence="20"
-                  action="action_account_cash_update"/>
+                  action="action_account_cash_update"/>-->
     </data>
 </odoo>
