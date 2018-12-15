@@ -31,14 +31,14 @@
             <field name="target">new</field>
         </record>
 
-        <record model="ir.values" id="more_cash_update_wizard">
+        <!-- <record model="ir.values" id="more_cash_update_wizard">
             <field name="model_id" ref="model_account_cash_update_it" />
             <field name="name">Actualizar</field>
             <field name="key2">client_action_multi</field>
             <field name="value" eval="'ir.actions.act_window,' + str(ref('action_update_wizard'))" />
             <field name="key">action</field>
             <field name="model">account.cash.update.it</field>
-        </record>
+        </record> -->
 
         <record model="ir.values" id="more_sale_update_wizard">
             <field name="model_id" ref="model_account_sale_update_it" />
