@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'account_parametros_it', 'account', 'account_currency_name_it'],
+    'depends': ['base', 'account_currency_name_it'],
 
     # always loaded
     'data': [
