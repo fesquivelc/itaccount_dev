@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="main_parameter_currency_update_form" model="ir.ui.view">
+            <field name="name">main.parameter.currency.update.form</field>
+            <field name="model">account_currency_name_it.currency_name</field>
+            <field name="inherit_id" ref="main_parameter_currency_update_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_name_id']/tree/field[@name='name_plural']" position="after">
+                    <field name="account_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
